@@ -1,0 +1,70 @@
+.music-toggle-btn {
+  position: fixed;
+  top: clamp(20px, 4vw, 32px);
+  right: clamp(20px, 4vw, 32px);
+  z-index: 9990;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 251, 237, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--color-gold);
+  color: var(--color-maroon);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(143, 31, 36, 0.15);
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.music-toggle-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(143, 31, 36, 0.25);
+}
+
+.music-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.disc-icon {
+  transition: all 0.3s ease;
+}
+
+.music-toggle-btn.playing .disc-icon {
+  animation: spin-disc 4s linear infinite;
+}
+
+.status-icon {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--color-maroon);
+  color: var(--color-bg);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-bg);
+}
+
+@keyframes spin-disc {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .music-toggle-btn {
+    top: auto;
+    bottom: clamp(100px, 15vh, 140px);
+    right: 20px;
+  }
+}

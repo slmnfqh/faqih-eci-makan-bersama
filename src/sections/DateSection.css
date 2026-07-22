@@ -1,0 +1,132 @@
+.date-section {
+  background: var(--color-bg);
+  position: relative;
+}
+
+.date-flower-top-left {
+  position: absolute;
+  top: clamp(10px, 3vw, 40px);
+  left: clamp(-25px, -3vw, -10px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.date-flower-bottom-right {
+  position: absolute;
+  bottom: clamp(30px, 6vw, 80px);
+  right: clamp(-20px, -2vw, -5px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Sparkle positions */
+.date-sparkle-left {
+  position: absolute;
+  top: 35%;
+  left: clamp(10px, 5vw, 60px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.date-sparkle-right {
+  position: absolute;
+  top: 25%;
+  right: clamp(15px, 5vw, 70px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.date-sparkle-right-2 {
+  position: absolute;
+  top: 55%;
+  right: clamp(25px, 7vw, 90px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.date-sparkle-left-2 {
+  position: absolute;
+  bottom: 30%;
+  left: clamp(20px, 6vw, 70px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Content */
+.date-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.date-calendar {
+  margin-bottom: 4px;
+}
+
+.date-title {
+  font-size: var(--text-5xl);
+  color: var(--color-maroon);
+  margin: 0;
+  line-height: 1;
+}
+
+.date-day {
+  font-family: var(--font-body);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--color-dark);
+  margin: 8px 0 0;
+}
+
+.date-date {
+  font-family: var(--font-body);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-muted);
+  margin: 4px 0 8px;
+}
+
+.date-ribbon-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 250px;
+  margin: 4px auto;
+}
+
+.date-line {
+  flex: 1;
+  height: 1.5px;
+  background: var(--color-dusty-red);
+  opacity: 0.4;
+}
+
+.date-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 8px 0 4px;
+}
+
+.date-time-text {
+  font-family: var(--font-handwriting);
+  font-size: var(--text-2xl);
+  color: var(--color-maroon);
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .date-flower-top-left {
+    top: 20px;
+    left: 10px;
+  }
+
+  .date-flower-bottom-right {
+    bottom: 60px;
+    right: 10px;
+  }
+}

@@ -1,0 +1,51 @@
+:root {
+  /* Background */
+  --color-bg: #fff9e8;
+  --color-bg-soft: #f9f1dc;
+  --color-paper: #fffbed;
+  --color-paper-edge: #f4f5ef;
+
+  /* Primary */
+  --color-maroon: #8f1f24;
+  --color-red: #a8242e;
+  --color-dusty-red: #b74a52;
+  --color-rose: #b72c4a;
+
+  /* Accents */
+  --color-gold: #9c8424;
+  --color-beige: #c7b29c;
+  --color-taupe: #a99d91;
+  --color-sage: #66705c;
+
+  /* Text */
+  --color-text: #852126;
+  --color-muted: #7b665e;
+  --color-dark: #1a1a1a;
+
+  /* Shadow */
+  --shadow-paper: 0 18px 28px rgba(92, 76, 55, 0.16),
+    0 7px 12px rgba(92, 76, 55, 0.12);
+  --shadow-paper-hover: 0 24px 36px rgba(92, 76, 55, 0.2),
+    0 10px 16px rgba(92, 76, 55, 0.14);
+
+  /* Radius */
+  --radius-soft: 28px;
+  --radius-pill: 50px;
+
+  /* Font families */
+  --font-script: "Allura", "Caveat", cursive;
+  --font-handwriting: "Caveat", cursive;
+  --font-body: "Nunito", sans-serif;
+
+  /* Font sizes */
+  --text-xs: clamp(0.65rem, 1.8vw, 0.75rem);
+  --text-sm: clamp(0.75rem, 2vw, 0.875rem);
+  --text-base: clamp(0.875rem, 2.5vw, 1rem);
+  --text-lg: clamp(1rem, 3vw, 1.125rem);
+  --text-xl: clamp(1.125rem, 3.5vw, 1.25rem);
+  --text-2xl: clamp(1.25rem, 4vw, 1.5rem);
+  --text-3xl: clamp(1.5rem, 5vw, 2rem);
+  --text-4xl: clamp(2rem, 7vw, 2.8rem);
+  --text-5xl: clamp(2.4rem, 9vw, 4rem);
+  --text-hero: clamp(3rem, 12vw, 5rem);
+}

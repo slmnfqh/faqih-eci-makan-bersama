@@ -1,0 +1,47 @@
+/* Mobile small: 320–374px */
+@media (max-width: 374px) {
+  .wavy-card {
+    padding: 24px 16px;
+  }
+
+  .wavy-card-wrapper {
+    max-width: calc(100% - 24px);
+  }
+
+  .section {
+    padding: 20px 12px;
+  }
+}
+
+/* Mobile: 375–767px (default / mobile-first) */
+@media (min-width: 375px) and (max-width: 767px) {
+  .wavy-card-wrapper {
+    max-width: calc(100% - 28px);
+  }
+}
+
+/* Tablet: 768–1023px */
+@media (min-width: 768px) {
+  .wavy-card-wrapper {
+    max-width: 620px;
+  }
+
+  .wavy-card {
+    padding: clamp(40px, 6vw, 64px) clamp(32px, 5vw, 52px);
+  }
+
+  .section {
+    padding: clamp(32px, 5vw, 80px) 24px;
+  }
+}
+
+/* Desktop: 1024px+ */
+@media (min-width: 1024px) {
+  .wavy-card-wrapper {
+    max-width: 560px;
+  }
+
+  .section {
+    padding: clamp(40px, 5vw, 80px) 32px;
+  }
+}

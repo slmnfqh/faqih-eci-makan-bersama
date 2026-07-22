@@ -1,0 +1,106 @@
+.wavy-card-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  filter: drop-shadow(0 18px 28px rgba(92, 76, 55, 0.16))
+    drop-shadow(0 7px 12px rgba(92, 76, 55, 0.12));
+}
+
+.wavy-card-inner {
+  position: relative;
+}
+
+.wavy-card {
+  position: relative;
+  background: var(--color-paper);
+  padding: clamp(40px, 8vw, 64px) clamp(24px, 6vw, 48px);
+  text-align: center;
+  z-index: 1;
+  min-height: clamp(550px, 80vh, 750px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wavy edges */
+.wavy-edge {
+  position: absolute;
+  z-index: 2;
+  display: block;
+}
+
+.wavy-edge-top {
+  top: -23px;
+  left: 24px;
+  right: 24px;
+  width: calc(100% - 48px);
+  height: 24px;
+}
+
+.wavy-edge-bottom {
+  bottom: -23px;
+  left: 24px;
+  right: 24px;
+  width: calc(100% - 48px);
+  height: 24px;
+}
+
+.wavy-edge-left {
+  top: -23px;
+  left: -23px;
+  width: 24px;
+  height: calc(100% + 46px);
+}
+
+.wavy-edge-right {
+  top: -23px;
+  right: -23px;
+  width: 24px;
+  height: calc(100% + 46px);
+}
+
+/* White outline effect */
+.wavy-card-inner::after {
+  content: "";
+  position: absolute;
+  inset: -32px;
+  border-radius: 40px;
+  border: 4px solid rgba(255, 255, 255, 1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 374px) {
+  .wavy-card-wrapper {
+    max-width: calc(100% - 24px);
+  }
+
+  .wavy-card {
+    padding: 28px 16px;
+  }
+
+  .wavy-edge-top,
+  .wavy-edge-bottom {
+    left: 16px;
+    right: 16px;
+    width: calc(100% - 32px);
+  }
+}
+
+@media (min-width: 768px) {
+  .wavy-card-wrapper {
+    max-width: 620px;
+  }
+
+  .wavy-card {
+    padding: clamp(48px, 7vw, 72px) clamp(36px, 6vw, 56px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .wavy-card-wrapper {
+    max-width: 560px;
+  }
+}

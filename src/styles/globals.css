@@ -1,0 +1,166 @@
+@import "./variables.css";
+@import "./animations.css";
+@import "./responsive.css";
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-bg);
+  font-family: var(--font-body);
+  color: var(--color-text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-maroon);
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: var(--radius-pill);
+  z-index: 9999;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Section base */
+.section {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: clamp(24px, 5vw, 64px) 16px;
+  overflow: clip;
+}
+
+/* Wavy card container */
+.wavy-card {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: clamp(32px, 6vw, 56px) clamp(20px, 5vw, 44px);
+  background: var(--color-paper);
+  text-align: center;
+}
+
+.wavy-card-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  filter: drop-shadow(0 18px 28px rgba(92, 76, 55, 0.16))
+    drop-shadow(0 7px 12px rgba(92, 76, 55, 0.12));
+}
+
+/* Divider ornamental */
+.divider-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 12px auto;
+  color: var(--color-dusty-red);
+  opacity: 0.7;
+  font-size: var(--text-sm);
+}
+
+/* Script font style */
+.font-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting);
+  font-weight: 600;
+}
+
+/* Focus visible */
+*:focus-visible {
+  outline: 2px solid var(--color-maroon);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Button base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-base);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  text-decoration: none;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.btn-primary {
+  background: var(--color-maroon);
+  color: var(--color-paper);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(143, 31, 36, 0.3);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Image defaults */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Selection */
+::selection {
+  background: rgba(143, 31, 36, 0.15);
+  color: var(--color-maroon);
+}
