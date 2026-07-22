@@ -4,7 +4,7 @@ import { motionTokens } from "../data/invitation";
 import InvitationCard from "../components/InvitationCard";
 import AnimatedSection from "../components/AnimatedSection";
 import { HeartIcon, HeartOutline, RibbonBow } from "../components/FloatingOrnament";
-import { Sunflower, Tulip } from "../components/DecorativeFlower";
+import { Sunflower, Tulip, SmallFlower } from "../components/DecorativeFlower";
 import "./ClosingSection.css";
 
 const containerVariants = {
@@ -73,6 +73,7 @@ export default function ClosingSection({ onImageClick }) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.6, duration: 0.8 }}
+        className="animate-sway"
         style={{ position: "absolute", bottom: "120px", left: "10px", zIndex: 10, pointerEvents: "none" }}
       >
         <Sunflower size={100} />
@@ -82,9 +83,47 @@ export default function ClosingSection({ onImageClick }) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.8, duration: 0.8 }}
-        style={{ position: "absolute", bottom: "160px", right: "10px", zIndex: 10, pointerEvents: "none" }}
+        className="animate-float"
+        style={{ position: "absolute", bottom: "160px", right: "10px", zIndex: 10, pointerEvents: "none", animationDelay: "1s" }}
       >
         <Tulip size={90} />
+      </motion.div>
+
+      {/* Extra animated flowers */}
+      <motion.div
+        initial={{ opacity: 0 }} whileInView={{ opacity: 0.6 }} viewport={{ once: true }}
+        transition={{ delay: 1, duration: 0.8 }}
+        className="animate-float"
+        style={{ position: "absolute", top: "15%", left: "5%", zIndex: 10, pointerEvents: "none", animationDelay: "1.5s" }}
+      >
+        <SmallFlower size={40} />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }} whileInView={{ opacity: 0.55 }} viewport={{ once: true }}
+        transition={{ delay: 1.2, duration: 0.8 }}
+        className="animate-sway"
+        style={{ position: "absolute", top: "25%", right: "8%", zIndex: 10, pointerEvents: "none", animationDelay: "0.8s" }}
+      >
+        <SmallFlower size={35} />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }} whileInView={{ opacity: 0.5 }} viewport={{ once: true }}
+        transition={{ delay: 1.4, duration: 0.8 }}
+        className="animate-float"
+        style={{ position: "absolute", bottom: "35%", left: "8%", zIndex: 10, pointerEvents: "none", animationDelay: "2.5s" }}
+      >
+        <SmallFlower size={30} />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }} whileInView={{ opacity: 0.5 }} viewport={{ once: true }}
+        transition={{ delay: 1.6, duration: 0.8 }}
+        className="animate-sway"
+        style={{ position: "absolute", bottom: "45%", right: "10%", zIndex: 10, pointerEvents: "none", animationDelay: "1s" }}
+      >
+        <Tulip size={55} flip />
       </motion.div>
 
       <InvitationCard>
