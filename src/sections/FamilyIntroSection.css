@@ -43,10 +43,20 @@
 /* Header */
 .family-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 0;
   margin-bottom: 8px;
+}
+
+.family-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-taupe);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: -4px;
 }
 
 .family-title {

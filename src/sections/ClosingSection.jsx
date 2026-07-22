@@ -235,7 +235,7 @@ export default function ClosingSection({ onImageClick }) {
               <br />
               awal dari keluarga yang
               <br />
-              semakin dekat
+              semakin dekat :)
             </p>
           </motion.div>
 
@@ -244,7 +244,7 @@ export default function ClosingSection({ onImageClick }) {
             variants={itemVariants}
             className="closing-see-you font-handwriting"
           >
-            ~see you soon 👋~
+            ~see you soon~
           </motion.p>
           <motion.p
             variants={itemVariants}

@@ -1,7 +1,7 @@
 export const invitationData = {
   title: "Pertemuan Dua Keluarga",
-  familyOne: "Keluarga Bpk Samsuri",
-  familyTwo: "Keluarga Bpk Ahmad Hasan",
+  familyOne: "Keluarga Bapak Samsuri",
+  familyTwo: "Keluarga Bapak Ahmad Hasan",
   date: "2026-07-26",
   dayName: "Minggu",
   dateFormatted: "26 Juli 2026",

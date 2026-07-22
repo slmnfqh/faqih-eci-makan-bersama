@@ -119,55 +119,46 @@ export default function FamilyIntroSection({ onImageClick }) {
       </motion.div>
 
       <InvitationCard>
-        {/* Title */}
         <motion.div
-          className="family-header"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: motionTokens.durationBase }}
-        >
-          <h2 className="family-title font-script" id="family-heading">
-            Halloo
-            <br />
-            Keluarga
-          </h2>
-
-          <motion.div
-            className="family-icon-group"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-          >
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-              <g stroke="var(--color-maroon)" strokeWidth="1.5" strokeLinecap="round" opacity="0.7">
-                <circle cx="14" cy="10" r="4" />
-                <path d="M14 14 L14 24" />
-                <path d="M14 18 L8 22" />
-                <path d="M14 18 L20 22" />
-                <circle cx="26" cy="13" r="3" />
-                <path d="M26 16 L26 24" />
-                <path d="M26 19 L22 22" />
-                <path d="M26 19 L30 22" />
-              </g>
-            </svg>
-          </motion.div>
-        </motion.div>
-
-        <SectionDivider width={180} />
-
-        {/* Activity list */}
-        <motion.ul
-          className="family-list"
+          className="family-content"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.25 }}
+          viewport={{ once: true, amount: 0.2 }}
+          style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
         >
-          {activities.map((activity, index) => {
-            const IconComponent = activity.icon;
-            return (
+          {/* Family Icon */}
+          <motion.div variants={itemVariants} className="family-icon-group" style={{ marginBottom: "8px" }}>
+            <svg width="48" height="48" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <g stroke="var(--color-maroon)" strokeWidth="1.5" strokeLinecap="round" opacity="0.7">
+                <circle cx="12" cy="14" r="3" />
+                <path d="M7 26C7 22 9 20 12 20C15 20 17 22 17 26" />
+                <circle cx="24" cy="14" r="3" />
+                <path d="M19 26C19 22 21 20 24 20C27 20 29 22 29 26" />
+                <path d="M18 10V8" />
+                <path d="M15 6H21" />
+              </g>
+            </svg>
+          </motion.div>
+
+          {/* Title */}
+          <motion.h2
+            variants={itemVariants}
+            className="family-title font-script"
+            id="family-heading"
+          >
+            Halloo Keluarga 👋
+          </motion.h2>
+
+          <motion.div variants={itemVariants}>
+            <SectionDivider width={160} />
+          </motion.div>
+
+          {/* Activity list */}
+          <ul className="family-list">
+            {activities.map((activity, index) => {
+              const IconComponent = activity.icon;
+              return (
               <motion.li key={index} className="family-list-item" variants={itemVariants}>
                 <motion.span className="family-list-icon" variants={iconVariants}>
                   <IconComponent
@@ -182,30 +173,31 @@ export default function FamilyIntroSection({ onImageClick }) {
               </motion.li>
             );
           })}
-        </motion.ul>
+          </ul>
 
-        {/* Bottom heart decoration */}
-        <motion.div
-          className="family-bottom-heart"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-        >
-          <svg width="60" height="30" viewBox="0 0 60 30" fill="none" aria-hidden="true">
-            <path
-              d="M10 15 Q30 -5, 50 15"
-              stroke="var(--color-dusty-red)"
-              strokeWidth="1.2"
-              fill="none"
-              opacity="0.5"
-            />
-            <path
-              d="M30 25 C28 20, 22 18, 22 22 C22 26, 30 30, 30 30 C30 30, 38 26, 38 22 C38 18, 32 20, 30 25"
-              fill="var(--color-dusty-red)"
-              opacity="0.4"
-            />
-          </svg>
+          {/* Bottom heart decoration */}
+          <motion.div
+            className="family-bottom-heart"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+          >
+            <svg width="60" height="30" viewBox="0 0 60 30" fill="none" aria-hidden="true">
+              <path
+                d="M10 15 Q30 -5, 50 15"
+                stroke="var(--color-dusty-red)"
+                strokeWidth="1.2"
+                fill="none"
+                opacity="0.5"
+              />
+              <path
+                d="M30 25 C28 20, 22 18, 22 22 C22 26, 30 30, 30 30 C30 30, 38 26, 38 22 C38 18, 32 20, 30 25"
+                fill="var(--color-dusty-red)"
+                opacity="0.4"
+              />
+            </svg>
+          </motion.div>
         </motion.div>
       </InvitationCard>
     </AnimatedSection>
