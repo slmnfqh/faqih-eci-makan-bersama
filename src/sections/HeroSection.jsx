@@ -9,7 +9,7 @@ import {
   RibbonOutline,
   EnvelopeIcon,
 } from "../components/FloatingOrnament";
-import { FlowerCluster, Tulip } from "../components/DecorativeFlower";
+import { FlowerCluster, Tulip, Sunflower, SmallFlower } from "../components/DecorativeFlower";
 import "./HeroSection.css";
 
 const containerVariants = {
@@ -96,6 +96,34 @@ export default function HeroSection({ onImageClick }) {
         style={{ position: "absolute", top: "15%", left: "5%", zIndex: 10, pointerEvents: "none" }}
       >
         <Tulip size={80} />
+      </motion.div>
+
+      {/* Extra animated flowers */}
+      <motion.div
+        initial={{ opacity: 0 }} whileInView={{ opacity: 0.7 }} viewport={{ once: true }}
+        transition={{ delay: 1.6, duration: 0.8 }}
+        className="animate-float"
+        style={{ position: "absolute", bottom: "18%", right: "5%", zIndex: 10, pointerEvents: "none", animationDelay: "0.5s" }}
+      >
+        <Sunflower size={60} />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }} whileInView={{ opacity: 0.6 }} viewport={{ once: true }}
+        transition={{ delay: 1.8, duration: 0.8 }}
+        className="animate-sway"
+        style={{ position: "absolute", top: "40%", left: "3%", zIndex: 10, pointerEvents: "none", animationDelay: "1s" }}
+      >
+        <SmallFlower size={35} />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }} whileInView={{ opacity: 0.5 }} viewport={{ once: true }}
+        transition={{ delay: 2, duration: 0.8 }}
+        className="animate-float"
+        style={{ position: "absolute", top: "55%", right: "8%", zIndex: 10, pointerEvents: "none", animationDelay: "2s" }}
+      >
+        <SmallFlower size={28} />
       </motion.div>
 
       {/* Main card */}

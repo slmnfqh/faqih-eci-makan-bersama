@@ -9,6 +9,7 @@
   right: clamp(-10px, -2vw, 10px);
   z-index: 10;
   pointer-events: none;
+  animation: sway 5s ease-in-out infinite;
 }
 
 .location-leaf-flowers {
@@ -17,6 +18,7 @@
   left: clamp(-10px, -2vw, 5px);
   z-index: 10;
   pointer-events: none;
+  animation: float-gentle 6s ease-in-out infinite 1s;
 }
 
 .location-star {

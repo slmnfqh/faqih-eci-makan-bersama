@@ -9,7 +9,7 @@ import {
   DiningTable,
   StarIcon,
 } from "../components/FloatingOrnament";
-import { FlowerCluster, SageLeaf, Sunflower, Tulip } from "../components/DecorativeFlower";
+import { FlowerCluster, SageLeaf, Sunflower, Tulip, SmallFlower } from "../components/DecorativeFlower";
 import { Navigation } from "lucide-react";
 import "./LocationSection.css";
 
@@ -70,6 +70,7 @@ export default function LocationSection() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.8, duration: 0.8 }}
+        className="animate-float"
         style={{ position: "absolute", top: "15%", left: "5%", zIndex: 10, pointerEvents: "none" }}
       >
         <Sunflower size={85} />
@@ -80,9 +81,47 @@ export default function LocationSection() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.9, duration: 0.8 }}
+        className="animate-sway"
         style={{ position: "absolute", bottom: "20%", right: "8%", zIndex: 10, pointerEvents: "none" }}
       >
         <Tulip size={75} />
+      </motion.div>
+
+      {/* Extra animated flowers */}
+      <motion.div
+        initial={{ opacity: 0 }} whileInView={{ opacity: 0.6 }} viewport={{ once: true }}
+        transition={{ delay: 1, duration: 0.8 }}
+        className="animate-sway"
+        style={{ position: "absolute", top: "55%", left: "3%", zIndex: 10, pointerEvents: "none", animationDelay: "1.5s" }}
+      >
+        <Tulip size={60} flip />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }} whileInView={{ opacity: 0.55 }} viewport={{ once: true }}
+        transition={{ delay: 1.2, duration: 0.8 }}
+        className="animate-float"
+        style={{ position: "absolute", top: "30%", right: "5%", zIndex: 10, pointerEvents: "none", animationDelay: "0.8s" }}
+      >
+        <SmallFlower size={35} />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }} whileInView={{ opacity: 0.5 }} viewport={{ once: true }}
+        transition={{ delay: 1.4, duration: 0.8 }}
+        className="animate-float"
+        style={{ position: "absolute", bottom: "12%", left: "10%", zIndex: 10, pointerEvents: "none", animationDelay: "2.5s" }}
+      >
+        <Sunflower size={50} />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }} whileInView={{ opacity: 0.5 }} viewport={{ once: true }}
+        transition={{ delay: 1.6, duration: 0.8 }}
+        className="animate-sway"
+        style={{ position: "absolute", bottom: "40%", right: "3%", zIndex: 10, pointerEvents: "none", animationDelay: "1s" }}
+      >
+        <SmallFlower size={28} />
       </motion.div>
 
       {/* Star accent */}

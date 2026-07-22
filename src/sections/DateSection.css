@@ -9,6 +9,7 @@
   left: clamp(-25px, -3vw, -10px);
   z-index: 10;
   pointer-events: none;
+  animation: float-gentle 5s ease-in-out infinite;
 }
 
 .date-flower-bottom-right {
@@ -17,6 +18,7 @@
   right: clamp(-20px, -2vw, -5px);
   z-index: 10;
   pointer-events: none;
+  animation: sway 6s ease-in-out infinite 0.5s;
 }
 
 /* Sparkle positions */

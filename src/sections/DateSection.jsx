@@ -10,7 +10,7 @@ import {
   SparkleIcon,
   RibbonBow,
 } from "../components/FloatingOrnament";
-import { FlowerCluster, Sunflower, Tulip } from "../components/DecorativeFlower";
+import { FlowerCluster, Sunflower, Tulip, SmallFlower } from "../components/DecorativeFlower";
 import "./DateSection.css";
 
 const containerVariants = {
@@ -65,6 +65,7 @@ export default function DateSection() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.7, duration: 0.8 }}
+        className="animate-sway"
         style={{ position: "absolute", bottom: "10%", left: "5%", zIndex: 10, pointerEvents: "none" }}
       >
         <Tulip size={80} />
@@ -75,9 +76,47 @@ export default function DateSection() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.9, duration: 0.8 }}
+        className="animate-float"
         style={{ position: "absolute", top: "15%", right: "8%", zIndex: 10, pointerEvents: "none" }}
       >
         <Sunflower size={90} />
+      </motion.div>
+
+      {/* Extra animated flowers */}
+      <motion.div
+        initial={{ opacity: 0 }} whileInView={{ opacity: 0.65 }} viewport={{ once: true }}
+        transition={{ delay: 1, duration: 0.8 }}
+        className="animate-float"
+        style={{ position: "absolute", top: "50%", left: "4%", zIndex: 10, pointerEvents: "none", animationDelay: "1.5s" }}
+      >
+        <Sunflower size={55} />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }} whileInView={{ opacity: 0.6 }} viewport={{ once: true }}
+        transition={{ delay: 1.2, duration: 0.8 }}
+        className="animate-sway"
+        style={{ position: "absolute", bottom: "25%", right: "5%", zIndex: 10, pointerEvents: "none", animationDelay: "0.8s" }}
+      >
+        <Tulip size={65} flip />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }} whileInView={{ opacity: 0.5 }} viewport={{ once: true }}
+        transition={{ delay: 1.4, duration: 0.8 }}
+        className="animate-float"
+        style={{ position: "absolute", top: "35%", left: "8%", zIndex: 10, pointerEvents: "none", animationDelay: "2s" }}
+      >
+        <SmallFlower size={30} />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }} whileInView={{ opacity: 0.5 }} viewport={{ once: true }}
+        transition={{ delay: 1.6, duration: 0.8 }}
+        className="animate-sway"
+        style={{ position: "absolute", top: "65%", right: "10%", zIndex: 10, pointerEvents: "none", animationDelay: "1s" }}
+      >
+        <SmallFlower size={25} />
       </motion.div>
 
       {/* Sparkles */}

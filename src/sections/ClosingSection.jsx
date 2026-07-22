@@ -171,11 +171,11 @@ export default function ClosingSection({ onImageClick }) {
             <motion.div 
               variants={itemVariants} 
               className="closing-photo-wrapper"
-              onClick={() => onImageClick && onImageClick("/assets/faqih-eci-seragam.png")}
+              onClick={() => onImageClick && onImageClick("/assets/faqih-eci-seragam-new.png")}
               style={{ position: 'relative', cursor: 'pointer' }}
             >
               <img 
-                src="/assets/faqih-eci-seragam.png" 
+                src="/assets/faqih-eci-seragam-new.png" 
                 alt="Faqih & Eci Seragam" 
                 className="closing-photo clickable-image"
               />

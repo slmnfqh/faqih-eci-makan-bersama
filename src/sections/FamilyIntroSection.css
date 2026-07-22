@@ -10,6 +10,7 @@
   z-index: 10;
   pointer-events: none;
   opacity: 0.6;
+  animation: sway 7s ease-in-out infinite;
 }
 
 .family-small-flower {
@@ -18,6 +19,7 @@
   right: clamp(10px, 3vw, 40px);
   z-index: 10;
   pointer-events: none;
+  animation: float-gentle 4s ease-in-out infinite 0.5s;
 }
 
 .family-ribbon {
@@ -26,6 +28,7 @@
   right: clamp(10px, 3vw, 60px);
   z-index: 10;
   pointer-events: none;
+  animation: sway 5s ease-in-out infinite 1s;
 }
 
 .family-stars {
@@ -34,6 +37,7 @@
   right: clamp(30px, 8vw, 100px);
   z-index: 10;
   pointer-events: none;
+  animation: twinkle 3s ease-in-out infinite;
 }
 
 /* Header */
@@ -107,6 +111,7 @@
   justify-content: center;
   width: 28px;
   height: 28px;
+  animation: pulse-heart 3s ease-in-out infinite;
 }
 
 .family-list-text {
@@ -120,6 +125,7 @@
   margin-top: 16px;
   display: flex;
   justify-content: center;
+  animation: pulse-heart 2.5s ease-in-out infinite;
 }
 
 @media (min-width: 768px) {

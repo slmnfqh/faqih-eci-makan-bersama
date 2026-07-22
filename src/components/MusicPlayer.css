@@ -1,13 +1,14 @@
 .music-toggle-btn {
   position: fixed;
-  top: clamp(20px, 4vw, 32px);
-  right: clamp(20px, 4vw, 32px);
+  top: clamp(16px, 3vw, 24px);
+  right: clamp(16px, 3vw, 24px);
   z-index: 9990;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background: rgba(255, 251, 237, 0.85);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--color-gold);
   color: var(--color-maroon);
   cursor: pointer;
@@ -61,10 +62,3 @@
   to { transform: rotate(360deg); }
 }
 
-@media (max-width: 768px) {
-  .music-toggle-btn {
-    top: auto;
-    bottom: clamp(100px, 15vh, 140px);
-    right: 20px;
-  }
-}
