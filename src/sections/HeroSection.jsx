@@ -103,16 +103,16 @@ export default function HeroSection({ onImageClick }) {
         initial={{ opacity: 0 }} whileInView={{ opacity: 0.7 }} viewport={{ once: true }}
         transition={{ delay: 1.6, duration: 0.8 }}
         className="animate-float"
-        style={{ position: "absolute", bottom: "18%", right: "5%", zIndex: 10, pointerEvents: "none", animationDelay: "0.5s" }}
+        style={{ position: "absolute", bottom: "8%", right: "2%", zIndex: 10, pointerEvents: "none", animationDelay: "0.5s" }}
       >
-        <Sunflower size={60} />
+        <Sunflower size={50} />
       </motion.div>
 
       <motion.div
         initial={{ opacity: 0 }} whileInView={{ opacity: 0.6 }} viewport={{ once: true }}
         transition={{ delay: 1.8, duration: 0.8 }}
         className="animate-sway"
-        style={{ position: "absolute", top: "40%", left: "3%", zIndex: 10, pointerEvents: "none", animationDelay: "1s" }}
+        style={{ position: "absolute", top: "40%", left: "1%", zIndex: 10, pointerEvents: "none", animationDelay: "1s" }}
       >
         <SmallFlower size={35} />
       </motion.div>
@@ -177,6 +177,14 @@ export default function HeroSection({ onImageClick }) {
                 <ZoomIn size={16} color="#fff" />
               </div>
             </motion.div>
+
+            {/* Greeting & Intro */}
+            <motion.p variants={itemVariants} className="hero-greeting">
+              Assalamu&apos;alaikum Wr. Wb.
+            </motion.p>
+            <motion.p variants={itemVariants} className="hero-intro">
+              Tanpa mengurangi rasa hormat, kami bermaksud mengundang Bapak/Ibu/Saudara/i pada acara makan bersama.
+            </motion.p>
 
             {/* Undangan */}
             <motion.p variants={itemVariants} className="hero-undangan font-handwriting">

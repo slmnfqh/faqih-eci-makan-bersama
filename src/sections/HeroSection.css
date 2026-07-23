@@ -25,8 +25,8 @@
 
 .hero-flower-bottom-left {
   position: absolute;
-  bottom: clamp(60px, 12vw, 120px);
-  left: clamp(-20px, -2vw, -10px);
+  bottom: clamp(20px, 4vw, 40px);
+  left: clamp(-30px, -4vw, -20px);
   z-index: 10;
   pointer-events: none;
   animation: float-gentle 6s ease-in-out infinite 1s;
@@ -91,6 +91,25 @@
   object-position: top center;
 }
 
+.hero-greeting {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-maroon);
+  margin: 12px 0 8px;
+  font-weight: 500;
+}
+
+.hero-intro {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  max-width: 320px;
+  line-height: 1.5;
+  margin: 0 0 20px;
+  padding: 0 16px;
+}
+
 .hero-undangan {
   font-family: var(--font-handwriting);
   font-size: var(--text-xl);
@@ -114,31 +133,40 @@
 .hero-families {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: clamp(12px, 3vw, 24px);
+  justify-content: space-between;
+  gap: clamp(8px, 2vw, 24px);
   margin-top: 12px;
   margin-bottom: 48px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  width: 100%;
+  position: relative;
+  z-index: 20;
 }
 
 .hero-family {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
+  gap: 4px;
+  flex: 1;
 }
 
 .hero-family-label {
-  font-family: var(--font-handwriting);
-  font-size: var(--text-sm);
-  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-taupe);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .hero-family-name {
   font-family: var(--font-handwriting);
-  font-size: var(--text-xl);
+  font-size: clamp(14px, 4.5vw, 26px);
   color: var(--color-maroon);
   font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .hero-ampersand {

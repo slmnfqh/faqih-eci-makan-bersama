@@ -147,7 +147,7 @@ export default function FamilyIntroSection({ onImageClick }) {
             className="family-title font-script"
             id="family-heading"
           >
-            Halloo Keluarga 👋
+            Halloo Keluarga
           </motion.h2>
 
           <motion.div variants={itemVariants}>
