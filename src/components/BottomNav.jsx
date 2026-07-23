@@ -101,7 +101,7 @@ export default function BottomNav() {
               <Info size={32} color="var(--color-maroon)" className="disclaimer-modal-icon" />
               <h3 className="disclaimer-modal-title font-handwriting">Disclaimer Tipis-tipis 🤏</h3>
               <p className="disclaimer-modal-text">
-                Semua konsep foto yang ada di web ini murni hasil editan AI (Artificial Intelligence) yaa :) Kalau aslinyaa.. nanti insya allah pas halal ya! hihi :)✨
+                Semua konsep foto yang ada di web ini murni hasil editan AI (Artificial Intelligence) yaa :) Kalau aslinyaa.. nanti insya allah ketika halal hihii :)✨
               </p>
             </motion.div>
           </motion.div>
