@@ -12,13 +12,16 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: rgba(255, 251, 237, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 251, 237, 0.98);
   padding: 10px 16px;
   border-radius: 50px;
   box-shadow: 0 8px 32px rgba(143, 31, 36, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.6);
+  margin: 0 auto;
+  max-width: 480px;
+  position: relative;
+  /* Hardware acceleration */
+  transform: translateZ(0);
 }
 
 .bottom-nav-item {
