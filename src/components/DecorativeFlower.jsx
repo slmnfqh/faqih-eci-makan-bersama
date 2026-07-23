@@ -183,3 +183,28 @@ export function Tulip({ size = 80, className = "", style = {}, flip = false }) {
     </svg>
   );
 }
+
+export function Rose({ size = 80, className = "", style = {}, flip = false }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 100 100"
+      className={className}
+      style={{ ...style, transform: flip ? "scaleX(-1)" : "none" }}
+      fill="none"
+      aria-hidden="true"
+    >
+      <g opacity="0.55">
+        {/* Leaves */}
+        <path d="M50 50 Q20 30 10 50 Q20 70 50 50" fill="#7d8f6e" transform="rotate(-30, 50, 50)" />
+        <path d="M50 50 Q80 30 90 50 Q80 70 50 50" fill="#8a9a78" transform="rotate(20, 50, 50)" />
+        {/* Outer petals */}
+        <circle cx="50" cy="50" r="30" fill="var(--color-maroon)" opacity="0.2" />
+        <path d="M50 20 C70 20, 80 40, 65 60 C50 80, 30 70, 25 50 C20 30, 30 20, 50 20 Z" fill="var(--color-dusty-red)" opacity="0.7" />
+        {/* Inner swirls */}
+        <path d="M40 40 C60 30, 70 50, 50 65 C35 75, 25 55, 45 35 C55 25, 65 40, 50 50" stroke="var(--color-maroon)" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.4" />
+      </g>
+    </svg>
+  );
+}

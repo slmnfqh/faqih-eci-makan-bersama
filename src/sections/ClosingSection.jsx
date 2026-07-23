@@ -4,7 +4,7 @@ import { motionTokens } from "../data/invitation";
 import InvitationCard from "../components/InvitationCard";
 import AnimatedSection from "../components/AnimatedSection";
 import { HeartIcon, HeartOutline, RibbonBow } from "../components/FloatingOrnament";
-import { Sunflower, Tulip, SmallFlower } from "../components/DecorativeFlower";
+import { Sunflower, Tulip, SmallFlower, Rose } from "../components/DecorativeFlower";
 import "./ClosingSection.css";
 
 const containerVariants = {
@@ -74,7 +74,7 @@ export default function ClosingSection({ onImageClick }) {
         viewport={{ once: true }}
         transition={{ delay: 0.6, duration: 0.8 }}
         className="animate-sway"
-        style={{ position: "absolute", bottom: "120px", left: "10px", zIndex: 10, pointerEvents: "none" }}
+        style={{ position: "absolute", bottom: "180px", left: "10px", zIndex: 0, pointerEvents: "none" }}
       >
         <Sunflower size={100} />
       </motion.div>
@@ -84,7 +84,7 @@ export default function ClosingSection({ onImageClick }) {
         viewport={{ once: true }}
         transition={{ delay: 0.8, duration: 0.8 }}
         className="animate-float"
-        style={{ position: "absolute", bottom: "160px", right: "10px", zIndex: 10, pointerEvents: "none", animationDelay: "1s" }}
+        style={{ position: "absolute", bottom: "220px", right: "10px", zIndex: 0, pointerEvents: "none", animationDelay: "1s" }}
       >
         <Tulip size={90} />
       </motion.div>
@@ -188,38 +188,74 @@ export default function ClosingSection({ onImageClick }) {
             <div className="closing-line" />
           </motion.div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
+          <div className="closing-photos-wrapper">
             {/* Photo 2: Rangkul */}
-            <motion.div 
-              variants={itemVariants} 
-              className="closing-photo-wrapper"
-              onClick={() => onImageClick && onImageClick("/assets/faqih-eci-rangkul.png")}
-              style={{ position: 'relative', cursor: 'pointer' }}
-            >
-              <img 
-                src="/assets/faqih-eci-rangkul.png" 
-                alt="Faqih & Eci" 
-                className="closing-photo clickable-image"
-              />
-              <div className="zoom-icon-overlay">
-                <ZoomIn size={16} color="#fff" />
+            <motion.div variants={itemVariants} className="closing-photo-container pos-left">
+              {/* Outer decorations */}
+              <motion.div
+                className="animate-float"
+                style={{ position: "absolute", top: "-5%", left: "-20%", zIndex: 20, pointerEvents: "none" }}
+              >
+                <Sunflower size={45} />
+              </motion.div>
+              <motion.div
+                className="animate-sway"
+                style={{ position: "absolute", bottom: "10%", right: "-15%", zIndex: 20, pointerEvents: "none", animationDelay: "1s" }}
+              >
+                <SmallFlower size={35} />
+              </motion.div>
+              <motion.div
+                className="animate-twinkle"
+                style={{ position: "absolute", top: "15%", right: "-5%", zIndex: 20, pointerEvents: "none", animationDelay: "0.5s" }}
+              >
+                <HeartOutline size={20} color="var(--color-maroon)" style={{ opacity: 0.6 }} />
+              </motion.div>
+
+              <div 
+                className="closing-photo-wrapper shape-1"
+                onClick={() => onImageClick && onImageClick("/assets/faqih-eci-rangkul.png")}
+                style={{ cursor: 'pointer' }}
+              >
+                <img 
+                  src="/assets/faqih-eci-rangkul.png" 
+                  alt="Faqih & Eci" 
+                  className="closing-photo clickable-image"
+                />
+                <div className="zoom-icon-overlay">
+                  <ZoomIn size={16} color="#fff" />
+                </div>
               </div>
             </motion.div>
 
             {/* Photo 3: Seragam */}
-            <motion.div 
-              variants={itemVariants} 
-              className="closing-photo-wrapper"
-              onClick={() => onImageClick && onImageClick("/assets/faqih-eci-seragam-new.png")}
-              style={{ position: 'relative', cursor: 'pointer' }}
-            >
-              <img 
-                src="/assets/faqih-eci-seragam-new.png" 
-                alt="Faqih & Eci Seragam" 
-                className="closing-photo clickable-image"
-              />
-              <div className="zoom-icon-overlay">
-                <ZoomIn size={16} color="#fff" />
+            <motion.div variants={itemVariants} className="closing-photo-container pos-right">
+              {/* Outer decorations */}
+              <motion.div
+                className="animate-sway"
+                style={{ position: "absolute", bottom: "-10%", right: "-20%", zIndex: 20, pointerEvents: "none", animationDelay: "0.5s" }}
+              >
+                <Rose size={65} />
+              </motion.div>
+              <motion.div
+                className="animate-twinkle"
+                style={{ position: "absolute", top: "-5%", left: "-10%", zIndex: 20, pointerEvents: "none", animationDelay: "0.2s" }}
+              >
+                <HeartOutline size={18} color="var(--color-maroon)" style={{ opacity: 0.5 }} />
+              </motion.div>
+
+              <div 
+                className="closing-photo-wrapper shape-2"
+                onClick={() => onImageClick && onImageClick("/assets/faqih-eci-seragam-new.png")}
+                style={{ cursor: 'pointer' }}
+              >
+                <img 
+                  src="/assets/faqih-eci-seragam-new.png" 
+                  alt="Faqih & Eci Seragam" 
+                  className="closing-photo clickable-image"
+                />
+                <div className="zoom-icon-overlay">
+                  <ZoomIn size={16} color="#fff" />
+                </div>
               </div>
             </motion.div>
           </div>
@@ -266,16 +302,6 @@ export default function ClosingSection({ onImageClick }) {
           </motion.button>
         </motion.div>
       </InvitationCard>
-
-      {/* Footer */}
-      <motion.footer
-        className="closing-footer"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.8, duration: 0.6 }}
-      >
-      </motion.footer>
     </AnimatedSection>
   );
 }
