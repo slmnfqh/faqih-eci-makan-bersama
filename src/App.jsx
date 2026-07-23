@@ -97,7 +97,7 @@ export default function App() {
       </main>
 
       {isOpened && <BottomNav />}
-      <audio id="bg-music" loop src="/assets/music/Waking Up Together With You [XJ1Jigjg1wo].mp3" />
+      <audio id="bg-music" loop src="/assets/music/tulus-teman-hidup-official-music-video_KzZuT1JW.mp3" />
       <MusicPlayer isOpened={isOpened} />
       
       <ImageLightbox 

@@ -211,24 +211,38 @@ export default function WelcomeCover({ isOpened, onOpen, onPlayMusic }) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5, duration: 0.8 }}
                 >
-                  UNDANGAN PERTEMUAN
+                  SILATURAHMI KELUARGA
                 </motion.p>
 
-                {/* Names */}
+                {/* Family Icon */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.6, duration: 0.8 }}
+                  style={{ marginBottom: "16px" }}
+                >
+                  <svg width="56" height="56" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                    <g stroke="var(--color-maroon)" strokeWidth="1.2" strokeLinecap="round" opacity="0.8">
+                      <circle cx="12" cy="14" r="3" />
+                      <path d="M7 26C7 22 9 20 12 20C15 20 17 22 17 26" />
+                      <circle cx="24" cy="14" r="3" />
+                      <path d="M19 26C19 22 21 20 24 20C27 20 29 22 29 26" />
+                      <path d="M18 10V8" />
+                      <path d="M15 6H21" />
+                    </g>
+                  </svg>
+                </motion.div>
+
+                {/* Names / Title */}
                 <motion.div
                   className="cover-title-group"
                   initial={{ opacity: 0, scale: 0.92 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.7, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <h1 className="cover-title-name font-handwriting">
-                    {invitationData.familyOne}
-                  </h1>
-                  <div className="cover-ampersand-wrapper">
-                    <span className="cover-ampersand font-script">&</span>
-                  </div>
-                  <h1 className="cover-title-name font-handwriting">
-                    {invitationData.familyTwo}
+                  <h1 className="cover-title-name font-handwriting" style={{ lineHeight: "1.2" }}>
+                    Pertemuan<br/>
+                    Dua Keluarga
                   </h1>
                 </motion.div>
 

@@ -8,6 +8,7 @@ import {
   HeartIcon,
   RibbonOutline,
   EnvelopeIcon,
+  SparkleIcon,
 } from "../components/FloatingOrnament";
 import { FlowerCluster, Tulip, Sunflower, SmallFlower } from "../components/DecorativeFlower";
 import "./HeroSection.css";
@@ -162,19 +163,46 @@ export default function HeroSection({ onImageClick }) {
             <SectionDivider width={160} />
 
             {/* Photo 1: Gandengan */}
-            <motion.div 
-              variants={itemVariants} 
-              className="hero-photo-wrapper"
-              onClick={() => onImageClick && onImageClick("/assets/faqih-eci-gandengan.png")}
-              style={{ position: 'relative', cursor: 'pointer' }}
-            >
-              <img 
-                src="/assets/faqih-eci-gandengan.png" 
-                alt="Faqih & Eci" 
-                className="hero-photo clickable-image"
-              />
-              <div className="zoom-icon-overlay">
-                <ZoomIn size={16} color="#fff" />
+            <motion.div variants={itemVariants} className="hero-photo-container">
+              {/* Outer decorative flowers */}
+              <motion.div
+                className="animate-float"
+                style={{ position: "absolute", top: "10%", left: "-15%", zIndex: 20, pointerEvents: "none" }}
+              >
+                <SmallFlower size={45} />
+              </motion.div>
+              <motion.div
+                className="animate-sway"
+                style={{ position: "absolute", bottom: "-5%", right: "-10%", zIndex: 20, pointerEvents: "none", animationDelay: "1s" }}
+              >
+                <Tulip size={55} />
+              </motion.div>
+              <motion.div
+                className="animate-twinkle"
+                style={{ position: "absolute", top: "0", right: "-5%", zIndex: 20, pointerEvents: "none", animationDelay: "0.5s", color: "var(--color-gold)" }}
+              >
+                <SparkleIcon size={24} />
+              </motion.div>
+              <motion.div
+                className="animate-twinkle"
+                style={{ position: "absolute", bottom: "10%", left: "-5%", zIndex: 20, pointerEvents: "none", animationDelay: "1.5s", color: "var(--color-gold)" }}
+              >
+                <SparkleIcon size={18} />
+              </motion.div>
+
+              <div 
+                className="hero-photo-wrapper"
+                onClick={() => onImageClick && onImageClick("/assets/faqih-eci-gandengan.png")}
+                style={{ cursor: 'pointer' }}
+              >
+                <img 
+                  src="/assets/faqih-eci-gandengan.png" 
+                  alt="Faqih & Eci" 
+                  className="hero-photo clickable-image"
+                />
+                <div className="zoom-icon-overlay">
+                  <ZoomIn size={16} color="#fff" />
+                </div>
               </div>
             </motion.div>
 
